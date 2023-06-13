@@ -5,6 +5,10 @@ import tensorflow as tf
 
 app = Flask(__name__)
 
+@app.route('/', methods=['GET'])
+def home():
+    return jsonify({'message': 'Sukses'})
+
 @app.route('/resize-image', methods=['POST'])
 def resize_image():
     # Menerima gambar dari permintaan
